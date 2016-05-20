@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fat/Protein/carbohydrates</title>
+  <script src="chart1.js"></script>
+</head>
+<body>
+
+<script src="http://d3js.org/d3.v2.js"></script>
+<script>
+//line.json
+var request = new XMLHttpRequest();
+request.open("GET", "JsonFiles/FPC.json", false);
+request.send(null);
+var jsonPoints = JSON.parse(request.responseText);
+line(jsonPoints);
+
+</script>
+
+</body>
+</html>
